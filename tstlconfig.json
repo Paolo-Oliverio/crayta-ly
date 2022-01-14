@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "outDir": "OUT/Scripts",
+    "target": "esnext",
+	"module":"Commonjs",
+    "moduleResolution": "node",
+    "allowJs": true,
+	"declaration": true,
+	"declarationDir" : "OUT/Types",
+    "noEmit": false,
+    "strict": false,
+    "esModuleInterop": true,
+	"removeComments": false,
+    "types": ["typescript-to-lua/language-extensions"],
+    "lib": ["esnext"]
+  },
+  "tstl": {
+    "luaTarget": "JIT",
+    "noHeader": true,
+    "luaLibImport": "inline",
+    "luaPlugins": [{ "name": "../../Plugins/LuaArrayIndexing.ts" }]
+  },
+  "include": ["./XformPreprocess", "./Scripts/Types", "./OUT/Types", "../../CraytaApi/lua"]
+}
